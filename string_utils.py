@@ -5,8 +5,10 @@ def split_before_each_uppercase(formula):
         if formula[i].isupper():
             parts.append(formula[start:i])
             start = i
-    parts.append(formula[start:])
+    if formula:
+        parts.append(formula[start:])
     return parts
+
 
 def split_at_digit(formula):
     for i in range(len(formula)):
